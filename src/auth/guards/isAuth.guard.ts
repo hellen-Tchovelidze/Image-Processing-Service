@@ -16,7 +16,7 @@ export class IsAuthGuard implements CanActivate{
         }
 
         try{
-            const payload = this.jwtService.verify(token, {secret: process.env.JWT_SECRET})
+            const payload = this.jwtService.verify(token, {secret: process.env.MY_JWT_SECRET})
             req.userId = payload.id
         }catch(e){
             throw new UnauthorizedException('token expired')

@@ -13,14 +13,14 @@ import { MailerModule } from '@nestjs-modules/mailer';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    MongooseModule.forRoot(process.env.MONGO_URL!),
+    MongooseModule.forRoot(process.env.MY_MONGO_URL!),
     MailerModule.forRoot({
       transport: {
-        host: process.env.EMAIL_HOST,
+        host: process.env.MY_EMAIL_HOST,
         port: 465,
         auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS,
+          user: process.env.MY_EMAIL_USER,
+          pass: process.env.MY_EMAIL_PASS,
         },
       },
     }),

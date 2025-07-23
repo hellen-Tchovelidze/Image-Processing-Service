@@ -12,7 +12,7 @@ import { EmailSenderModule } from 'src/email-sender/email-sender.module';
     ConfigModule.forRoot(),
     JwtModule.register({
       global: true,
-      secret: process.env.JWT_SECRET
+      secret: process.env.MY_JWT_SECRET
     }),
     MongooseModule.forFeature([
       { schema: userSchema, name: 'user' }
