@@ -19,7 +19,7 @@ export class AswS3Service {
       credentials: {
        
         accessKeyId: process.env.AWS_ACCESS_KEY!,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEYY!,
       },
       region: process.env.AWS_REGIONN,
     });
